@@ -1,0 +1,111 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  /* Portfolio container */
+  .portfolio-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ece3d0;
+    position: relative;
+  }
+  
+  /* Navigation */
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 20px;
+  }
+  
+  .nav-link {
+    color: #860000;
+    font-size: 36px;
+    font-family: "Gurajada", serif;
+    text-decoration: none;
+  }
+  
+  /* Content section */
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    gap: 43px;
+  }
+  
+  /* Profile header */
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-name {
+    color: #860000;
+    font-size: 96px;
+    font-family: "League Gothic", sans-serif;
+    margin-bottom: 24px;
+    font-weight: normal;
+  }
+  
+  .profile-image {
+    width: 479px;
+    height: 408px;
+    object-fit: cover;
+  }
+  
+  /* About section */
+  .about-section {
+    background-color: #860000;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .about-title {
+    color: #ece3d0;
+    font-size: 96px;
+    font-family: "League Gothic", sans-serif;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+  
+  .about-description {
+    color: #fff;
+    font-family: "Lekton", sans-serif;
+    font-size: 40px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 991px) {
+    .about-description {
+      font-size: 32px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .navigation {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+  
+    .content-section {
+      padding: 0 20px;
+    }
+  
+    .profile-image {
+      width: 100%;
+    }
+  
+    .about-description {
+      font-size: 24px;
+    }
+  }
+  
