@@ -1,36 +1,46 @@
 /* Base styles */
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: sans-serif;
   }
   
-  /* Introduction container */
-  .intro-container {
+  /* Portfolio container */
+  .portfolio-container {
     width: 100%;
     min-height: 100vh;
     background-color: #ece3d0;
     position: relative;
   }
   
-  /* Header */
-  .intro-header {
-    color: #860000;
-    font-size: 36px;
-    font-family: "Gurajada", serif;
+  /* Navigation */
+  .navigation {
+    display: flex;
+    justify-content: space-between;
     padding: 24px 20px;
   }
   
+  .nav-link {
+    color: #860000;
+    font-size: 36px;
+    font-family: "Gurajada", serif;
+    text-decoration: none;
+  }
+  
   /* Content section */
-  .intro-content {
+  .content-section {
     display: flex;
-    flex-direction: row;
-    padding: 4px 50px 0;
+    flex-direction: column;
+    padding: 0 50px;
     gap: 43px;
   }
   
-  /* Profile section */
-  .profile-section {
+  /* Profile header */
+  .profile-header {
     display: flex;
     flex-direction: column;
   }
@@ -40,8 +50,6 @@ body {
     font-size: 96px;
     font-family: "League Gothic", sans-serif;
     margin-bottom: 24px;
-    padding-top: 40px;
-    margin-top: 0;
     font-weight: normal;
   }
   
@@ -49,25 +57,22 @@ body {
     width: 479px;
     height: 408px;
     object-fit: cover;
-    max-width: 500px;
-    margin-right: auto;
   }
   
   /* About section */
   .about-section {
     background-color: #860000;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    width: auto;
-    align-self: center;
   }
   
-  .about-heading {
+  .about-title {
     color: #ece3d0;
     font-size: 96px;
     font-family: "League Gothic", sans-serif;
     margin-bottom: 20px;
-    margin-top: 0;
     font-weight: normal;
   }
   
@@ -75,10 +80,9 @@ body {
     color: #fff;
     font-family: "Lekton", sans-serif;
     font-size: 40px;
-    margin: 0;
   }
   
-  /* Media queries */
+  /* Responsive styles */
   @media (max-width: 991px) {
     .about-description {
       font-size: 32px;
@@ -86,14 +90,14 @@ body {
   }
   
   @media (max-width: 640px) {
-    .intro-header {
+    .navigation {
+      flex-direction: column;
+      align-items: center;
       gap: 16px;
     }
   
-    .intro-content {
-      padding-left: 20px;
-      padding-right: 20px;
-      flex-direction: column;
+    .content-section {
+      padding: 0 20px;
     }
   
     .profile-image {
